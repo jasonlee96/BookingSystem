@@ -17,7 +17,7 @@ public class UserCommandService {
     private ApplicationEventPublisher eventPublisher;  // Publishes events
 
     public void handleCreateUser(CreateUserCommand command) {
-        UserModel user = new UserModel(command.getUserName(), command.getPassword(), command.getRoleID(), command.getStatusID());
+        UserModel user = new UserModel(command.getUserName(), command.getPassword(), command.getEmail(), command.getRoleID(), command.getStatusID());
         userRepository.save(user);
 
         // Publish event to notify other microservices

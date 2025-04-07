@@ -1,11 +1,11 @@
 package com.jasonlee213.common.dtos;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class CommonListDataResponse<T> extends CommonResponse{
-    public CommonListDataResponse(int status, String message, ArrayList<T> data){
+    public CommonListDataResponse(int status, String message, List<T> data){
         super(status, message);
         this.data = data;
     }
-    private ArrayList<T> data;
+    private List<T> data;
 }
